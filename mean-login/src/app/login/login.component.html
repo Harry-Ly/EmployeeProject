@@ -1,0 +1,51 @@
+<form action="/login.html" (ngSubmit)="onLoginClick(loginForm)" #loginForm="ngForm">
+  <div class="loginPage">
+  <h1>Employee Login</h1>
+    <!-- Creates email textbox -->
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        placeholder="Email"
+        id="email"
+        name="email"
+        required
+        minlength="8"
+        maxlength="35"
+        [(ngModel)]="enteredEmail"
+        email
+        #email="ngModel">
+        <mat-error *ngIf="email.invalid">Incorrect Email</mat-error>
+    </mat-form-field>
+    <br>
+
+    <!-- Creates password textbox -->
+    <mat-form-field>
+      <input
+      matInput
+      type="password"
+      placeholder="Password"
+      id="password"
+      name="password"
+      required
+      minlength="8"
+      maxlength="35"
+      [(ngModel)]="enteredPassword"
+      #password="ngModel">
+      <mat-error *ngIf="password.invalid">Incorrect Password</mat-error>
+    </mat-form-field>
+
+    <!-- Creates a login button with method from .ts -->
+    <!-- <input type="submit" value="Login"> -->
+    <!-- (click)="onLoginClick()" -->
+    <div>
+      <button
+        id="login"
+        mat-raised-button
+        color="primary"
+        type="submit">Login
+      </button>
+    </div>
+    <p>Don't have an account? <a href="register">Register</a>.</p>
+  </div>
+</form>

@@ -1,0 +1,38 @@
+<h1>Employee List</h1>
+<div>
+  <button
+    id="add"
+    mat-raised-button
+    routerLink="/employeeadd"
+    color="primary"
+    type="button">Add Employee
+  </button>
+</div>
+
+<ul class="employees">
+  <table mat-table border="3">
+    <tr>
+      <th>Name</th>
+      <th>Email Address</th>
+    </tr>
+    <tr *ngFor="let employee of employees"
+        [class.selected]="employee === selectedEmployee"
+        (click)="onSelect(employee)"
+        id="employeeRow">
+      <td class="employeeName"><a href = "http://localhost:4200/employeeadd">{{ employee.first + " " + employee.last }}</a></td>
+      <td>{{ employee.email }}</td>
+    </tr>
+  </table>
+</ul>
+
+<!--
+<div *ngIf="selectedEmployee">
+  <h2>{{ selectedEmployee.email | uppercase }} </h2>
+  <div><span>Name: </span>{{ selectedEmployee.first }}</div>
+  <div>
+    <label>Email:
+      <input [(ngModel)]="selectedEmployee.email" placeholder="hi">
+    </label>
+  </div>
+</div> -->
+

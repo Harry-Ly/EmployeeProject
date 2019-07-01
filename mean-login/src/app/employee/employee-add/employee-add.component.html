@@ -1,0 +1,198 @@
+<mat-card>
+  <form action="/employeelist.html" (submit)="onAddClick(employeeAddForm)" #employeeAddForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="firstName"
+        ngModel
+        required
+        minlength="2"
+        maxlength="35"
+        placeholder="First Name"
+        #firstName="ngModel">
+      <mat-error *ngIf="firstName.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="lastName"
+        ngModel
+        required
+        minlength="2"
+        maxlength="35"
+        placeholder="Last Name"
+        #lastName="ngModel">
+      <mat-error *ngIf="lastName.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="address"
+        ngModel
+        required
+        minlength="10"
+        maxlength="50"
+        placeholder="Address"
+        #address="ngModel">
+      <mat-error *ngIf="address.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="city"
+        ngModel
+        required
+        minlength="5"
+        maxlength="50"
+        placeholder="City"
+        #city="ngModel">
+      <mat-error *ngIf="city.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select matInput
+        type="text"
+        name="state"
+        ngModel
+        required
+        placeholder="Select State"
+        #state="ngModel">
+          <mat-option value="AL">Alabama</mat-option>
+          <mat-option value="AK">Alaska</mat-option>
+          <mat-option value="AZ">Arizona</mat-option>
+          <mat-option value="AR">Arkansas</mat-option>
+          <mat-option value="CA">California</mat-option>
+          <mat-option value="CO">Colorado</mat-option>
+          <mat-option value="CT">Connecticut</mat-option>
+          <mat-option value="DE">Delaware</mat-option>
+          <mat-option value="DC">District Of Columbia</mat-option>
+          <mat-option value="FL">Florida</mat-option>
+          <mat-option value="GA">Georgia</mat-option>
+          <mat-option value="HI">Hawaii</mat-option>
+          <mat-option value="ID">Idaho</mat-option>
+          <mat-option value="IL">Illinois</mat-option>
+          <mat-option value="IN">Indiana</mat-option>
+          <mat-option value="IA">Iowa</mat-option>
+          <mat-option value="KS">Kansas</mat-option>
+          <mat-option value="KY">Kentucky</mat-option>
+          <mat-option value="LA">Louisiana</mat-option>
+          <mat-option value="ME">Maine</mat-option>
+          <mat-option value="MD">Maryland</mat-option>
+          <mat-option value="MA">Massachusetts</mat-option>
+          <mat-option value="MI">Michigan</mat-option>
+          <mat-option value="MN">Minnesota</mat-option>
+          <mat-option value="MS">Mississippi</mat-option>
+          <mat-option value="MO">Missouri</mat-option>
+          <mat-option value="MT">Montana</mat-option>
+          <mat-option value="NE">Nebraska</mat-option>
+          <mat-option value="NV">Nevada</mat-option>
+          <mat-option value="NH">New Hampshire</mat-option>
+          <mat-option value="NJ">New Jersey</mat-option>
+          <mat-option value="NM">New Mexico</mat-option>
+          <mat-option value="NY">New York</mat-option>
+          <mat-option value="NC">North Carolina</mat-option>
+          <mat-option value="ND">North Dakota</mat-option>
+          <mat-option value="OH">Ohio</mat-option>
+          <mat-option value="OK">Oklahoma</mat-option>
+          <mat-option value="OR">Oregon</mat-option>
+          <mat-option value="PA">Pennsylvania</mat-option>
+          <mat-option value="RI">Rhode Island</mat-option>
+          <mat-option value="SC">South Carolina</mat-option>
+          <mat-option value="SD">South Dakota</mat-option>
+          <mat-option value="TN">Tennessee</mat-option>
+          <mat-option value="TX">Texas</mat-option>
+          <mat-option value="UT">Utah</mat-option>
+          <mat-option value="VT">Vermont</mat-option>
+          <mat-option value="VA">Virginia</mat-option>
+          <mat-option value="WA">Washington</mat-option>
+          <mat-option value="WV">West Virginia</mat-option>
+          <mat-option value="WI">Wisconsin</mat-option>
+          <mat-option value="WY">Wyoming</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="zip"
+        pattern="[0-9]+"
+        ngModel
+        required
+        minlength="5"
+        maxlength="9"
+        placeholder="Zip Code"
+        #zip="ngModel">
+      <mat-error *ngIf="zip.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <hr>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="homePhone"
+        ngModel
+        required
+        pattern="[1-9]{1}[0-9]{9}"
+        placeholder="Home Phone"
+        #homePhone="ngModel">
+      <mat-error *ngIf="homePhone.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="cellPhone"
+        ngModel
+        required
+        pattern="[1-9]{1}[0-9]{9}"
+        placeholder="Cell Phone"
+        #cellPhone="ngModel">
+      <mat-error *ngIf="cellPhone.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="email"
+        ngModel
+        required
+        minlength="10"
+        maxlength="50"
+        placeholder="Email"
+        #email="ngModel">
+      <mat-error *ngIf="email.invalid">Incorrect Input</mat-error>
+    </mat-form-field>
+
+    <div>
+      <button
+        id="add"
+        mat-raised-button
+        color="primary"
+
+        type="submit">Save
+      </button>
+    </div>
+    <br>
+    <div>
+      <button
+        id="cancel"
+        mat-raised-button
+        routerLink="/employeelist"
+        color="warn"
+        type="submit">Cancel
+      </button>
+    </div>
+  </form>
+</mat-card>

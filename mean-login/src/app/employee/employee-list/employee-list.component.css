@@ -1,0 +1,12 @@
+.selected {
+  background-color: aliceblue;
+}
+
+.employeeName {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+table, th, td {
+  border: 1px, solid black;
+}

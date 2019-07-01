@@ -1,0 +1,135 @@
+<form action="/register.html" (submit)="onRegisterClick(registerForm)" #registerForm="ngForm">
+  <div class="registerPage">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <mat-form-field>
+      <input
+        matInput
+        type="firstName"
+        placeholder="First Name"
+        id="firstName"
+        name="firstName"
+        required
+        minlength="2"
+        [(ngModel)]="registerFirstName"
+        #firstName="ngModel">
+        <mat-error *ngIf="firstName.invalid">Invalid First Name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="lastName"
+        placeholder="Last Name"
+        id="lastName"
+        name="lastName"
+        required
+        minlength="2"
+        [(ngModel)]="registerLastName"
+        #lastName="ngModel">
+        <mat-error *ngIf="lastName.invalid">Invalid Last Name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        placeholder="Email"
+        id="email"
+        name="email"
+        required
+        minlength="2"
+        [(ngModel)]="registerEmail"
+        #email="ngModel">
+        <mat-error *ngIf="email.invalid">Invalid Email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        id="password"
+        name="password"
+        required
+        minlength="2"
+        [(ngModel)]="registerPassword"
+        #password="ngModel">
+        <mat-error *ngIf="password.invalid">Invalid Password</mat-error>
+      </mat-form-field>
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit">Register
+        </button>
+      </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="login">Sign in</a>.</p>
+  </div>
+
+<!-- <html>
+  <a class="anchor" id="registerpage"></a>
+  <a class="anchor" id="loginpage"></a>
+  <div id="container">
+    <div id="login" class="form">
+      <form action="login.html">
+        <h1>Log in</h1>
+          <label for="email" class="email">Email</label>
+          <input id="email" name="email" required="required" type="text" placeholder="abc123@email.com">
+
+          <label for="password" class="password">Password</label>
+          <input id="password" name="password" required="required" type="text">
+
+          <p class="login_button">
+            <input type="submit" value="Login">
+          </p>
+
+          <a href="#registerpage" class="login_register">Register here</a>
+      </form>
+    </div>
+
+    <div id="register" class="form">
+      <form action="register.html">
+        <h1>Register</h1>
+          <label for="first" class="employee" mi>First name</label>
+          <input id="first" name="first" required="required" type="text" minlength="2" maxlength="35">
+
+          <label for="last" class="employee">Last name</label>
+          <input id="last" name="last" required="required" type="text" minlength="2" maxlength="35">
+
+          <label for="address" class="employee">Address</label>
+          <input id="address" name="address" required="required" type="text" minlength="10" maxlength="50">
+
+          <label for="city" class="employee">City</label>
+          <input id="city" name="city" required="required" type="text" minlength="5" maxlength="50">
+
+          <label for="state" class="employee">State</label>
+          <input id="state" name="state" required="required" type="text">
+
+          <label for="zip" class="employee">Zip/Postal Code</label>
+          <input id="zip" name="zip" required="required" type="text">
+
+          <hr>
+
+          <label for="homephone" class="employee">Homephone</label>
+          <input id="homephone" name="homephone" required="required" type="text">
+
+          <label for="cellphone" class="employee">Cellphone</label>
+          <input id="cellphone" name="cellphone" required="required" type="text">
+
+          <label for="email" class="employee">Email</label>
+          <input id="email" name="email" required="required" type="text" minlength="10" maxlength="50">
+
+          <p class="signup button">
+            <input type="submit" value="Sign up"/>
+          </p>
+          <p class="change_link">
+              Already a member?
+            <a href="#loginpage" class="login_register">Log in</a>
+          </p>
+      </form>
+    </div>
+  </div>
+</html> -->
